@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Drone Control Panel</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 5px;
+            text-align: center;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        #eventTable tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Drone Control Panel</h1>
+
+    <table id="eventTable">
+        <tr>
+            <th>File of Events</th>
+            <th>+X Right</th>
+            <th>-X Left</th>
+            <th>+Y Forward</th>
+            <th>-Y Backward</th>
+            <th>+Z Up</th>
+            <th>-Z Down</th>
+        </tr>
+        <tr data-model="Measured Events">
+            <td>Measured Events</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr data-model="Gradient Boosting">
+            <td>Predicted by Gradient Boosting</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr data-model="LTSM">
+            <td>Predicted by LSTM</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr data-model="CNN">
+            <td>Predicted by CNN</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <br>
+    <button id="startButton">Start</button>
+    <button id="stopButton">Stop</button>
+    Time Frame: <input type="text" id="timeFrame" readonly>
+    <br>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
